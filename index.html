@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index.html</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <script src="script.js"></script> <!-- jQuery for easy DOM manipulation -->
+</head> 
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="https://www.indiascienceandtechnology.gov.in/listingpage/all-programmes-schemes">Resources</a></li>
+                <li><a href="https://sdgs.un.org/goals">Sustainability</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="https://mausam.imd.gov.in/" target="_self">Weather Report</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="https://www.rapidtables.com/calc/electric/energy-consumption-calculator.htm">Energy Calculator</a></li>
+                <li><a href="#map">Interactive Map</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <div class="header-content">
+            <h1>Welcome to Natural Resources Hub</h1>
+            <p>Explore and Learn About Renewable and Non-Renewable Resources</p>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="home-section">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="img2.png" class="slide-img" alt="Natural Resources Image 1" draggable="false">
+                <div class="text-box">Natural resources are materials from Earth that are used to support life and meet people's needs.</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="img.png" class="slide-img" alt="Natural Resources Image 2" draggable="false">
+                <div class="text-box">They include renewable resources like forests, water, and solar energy.</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="image.png" class="slide-img" alt="Natural Resources Image 3" draggable="false">
+                <div class="text-box">Non-renewable resources like fossil fuels and minerals are also essential.</div>
+            </div>
+    
+            <!-- Left and right controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </section>
+    
+
+    <!-- Resources Section -->
+    <section id="resources" class="resources-section">
+        <h2>Types of Natural Resources</h2>
+        <div class="resource-grid">
+            <div class="resource">
+                <h3>Renewable Resources</h3>
+                <p>Resources that can be replenished naturally over time such as solar energy, wind, forests, and water.</p>
+            </div>
+            <div class="resource">
+                <h3>Non-renewable Resources</h3>
+                <p>Resources like fossil fuels and minerals that are limited and take millions of years to form.</p>
+            </div>
+        </div>
+        <div id="resource-data">
+            <h3>Current Status of Natural Resources</h3>
+            <p id="natural-resources-data">Fetching current data...</p>
+        </div>
+    </section>
+
+    <!-- Sustainability Section -->
+    <section id="sustainability" class="sustainability-section">
+        <h2>How to Use Renewable Energies</h2>
+        <p>Sustainable resource management ensures that the needs of the present are met without compromising future generations' ability to meet their needs. Renewable energy such as wind, solar, and hydropower is the key to sustainability.</p>
+        <ul>
+            <li>Solar panels: Capture the sun's energy for electricity.</li>
+            <li>Wind turbines: Harness wind energy for power generation.</li>
+            <li>Hydropower: Use water flow to generate electricity.</li>
+            <li>Geothermal: Utilize Earth’s heat to produce energy.</li>
+        </ul>
+    </section>
+
+    <!-- Weather Section -->
+    <section id="weather" class="weather-section">
+        <h2>Check Weather for Any Location</h2>
+        <form id="weather-form">
+            <label for="city">Enter City:</label>
+            <input type="text" id="city" name="city" required>
+            <button type="submit">Get Weather</button>
+        </form>
+        <div id="weather-result">
+            <h3>Weather Report</h3>
+            <p id="weather-data">Please enter a city to see the weather report.</p>
+        </div>
+    </section>
+
+    <!-- Renewable Energy Calculator Section -->
+    <section id="calculator" class="calculator-section">
+        <h2>Renewable Energy Calculator</h2>
+        <p>Estimate your potential savings by switching to renewable energy.</p>
+        <form id="energy-calculator">
+            <label for="current-bill">Current Monthly Energy Bill (in $):</label>
+            <input type="number" id="current-bill" name="current-bill" required>
+
+            <label for="renewable-percentage">Percentage of Renewable Energy (%):</label>
+            <input type="number" id="renewable-percentage" name="renewable-percentage" required>
+
+            <button type="submit">Calculate Savings</button>
+        </form>
+        <p id="savings-result">Enter your data to calculate potential savings.</p>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop" class="shop-section">
+        <h2>Shop Renewable Energy Products</h2>
+        <p>Browse through Amazon for renewable energy solutions, such as solar panels, wind turbines, and other eco-friendly products.</p>
+        <ul>
+            <li><a href="https://www.amazon.com/s?k=solar+panels" target="_blank">Shop Solar Panels</a></li>
+            <li><a href="https://www.amazon.com/s?k=wind+turbines" target="_blank">Shop Wind Turbines</a></li>
+            <li><a href="https://www.amazon.com/s?k=battery+storage" target="_blank">Shop Battery Storage</a></li>
+            <li><a href="https://www.amazon.com/s?k=geothermal+systems" target="_blank">Shop Geothermal Systems</a></li>
+        </ul>
+    </section>
+
+    <!-- Interactive Map Section -->
+    <section id="map" class="map-section">
+        <h2>Interactive Map of Global Renewable Energy Projects</h2>
+        <div id="map-container">
+            <p>Interactive Map Loading...</p>
+            <!-- Insert code for embedding Google Maps or any other map service here -->
+            <iframe
+            width="650"
+            height="500"
+            style="border:0"
+            loading="lazy"
+            allowfullscreen
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.95373631584453!3d-37.81627944202161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43fdb1c02b%3A0x1b69d3bd8f2a3cdb!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1634846953204!5m2!1sen!2sus">
+        </iframe>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="news-section">
+        <h2>Latest News on Natural Resources</h2>
+        <div id="news-content">
+            <a href="https://news.mongabay.com/list/natural-resources/"><p>Latest news...</p></a>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog-section">
+        <h2>Latest Articles</h2>
+        <div class="blog-posts">
+            <article class="post">
+                <h3>How to Conserve Water in Daily Life</h3>
+                <p>Tips and tricks to reduce water usage and conserve this vital resource for future generations.</p>
+                <a href="https://www.budgetdumpster.com/blog/water-conservation-tips-daily-life">Read More</a>
+            </article>
+            <article class="post">
+                <h3>Renewable Energy: The Future of Power</h3>
+                <p>Explore the latest trends in renewable energy like wind and solar power, and how they're shaping the future.</p>
+                <a href="https://www.un.org/en/climatechange/raising-ambition/renewable-energy">Read More</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- Login Section -->
+    <section id="login" class="login-section">
+        <h2>Login or Sign Up</h2>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+            <p>Don't have an account? <a href="#signup">Sign up</a></p>
+        </form>
+    </section>
+
+    <!-- Signup Section -->
+    <section id="signup" class="signup-section">
+        <h2>Sign Up for a New Account</h2>
+        <form id="signup-form">
+            <label for="new-username">Username:</label>
+            <input type="text" id="new-username" name="new-username" required>
+
+            <label for="new-password">Password:</label>
+            <input type="password" id="new-password" name="new-password" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <button type="submit">Sign Up</button>
+</form>
+</section>
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let slides = document.getElementsByClassName("mySlides");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        slides[slideIndex-1].style.display = "block";  
+        setTimeout(showSlides, 4000); // Change image every 3 seconds
+    }
+
+    function plusSlides(n) {
+        slideIndex += n;
+        let slides = document.getElementsByClassName("mySlides");
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        if (slideIndex < 1) {slideIndex = slides.length}
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex-1].style.display = "block";
+    }
+</script>
+<script>
+    // Function to calculate savings based on renewable energy usage
+    document.getElementById('energy-calculator').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevents form submission
+
+        // Get the values from the input fields
+        const currentBill = parseFloat(document.getElementById('current-bill').value);
+        const renewablePercentage = parseFloat(document.getElementById('renewable-percentage').value);
+
+        // Check for valid inputs
+        if (isNaN(currentBill) || isNaN(renewablePercentage) || currentBill <= 0 || renewablePercentage < 0 || renewablePercentage > 100) {
+            alert('Please enter valid values. Renewable percentage must be between 0 and 100.');
+            return;
+        }
+
+        // Calculate potential savings
+        const savings = (renewablePercentage / 100) * currentBill;
+        
+        // Display the result
+        document.getElementById('savings-result').textContent = `Your potential savings per month is: $${savings.toFixed(2)}.`;
+    });
+</script>
+
+    
+</body>
+</html>
